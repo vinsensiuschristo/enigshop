@@ -1,0 +1,25 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: API
+paths:
+  /api/v1/products:
+    post:
+      tags:
+        - product
+      operationId: addProduct
+      description: addProduct
+      requestBody:
+        description: product
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: string
